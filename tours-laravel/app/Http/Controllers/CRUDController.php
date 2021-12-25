@@ -28,6 +28,7 @@ class CRUDController extends Controller
             'image' => 'required',
             'time' => 'required',
             'price' => 'required',
+            'schedule' => 'required',
             'id_type' => 'required',
         ]);
 
@@ -46,6 +47,7 @@ class CRUDController extends Controller
             $tour->image = $request->input('image');
             $tour->time = $request->input('time');
             $tour->price = $request->input('price');
+            $tour->schedule = $request->input('schedule');
             $tour->price = $request->input('id_type');
 
             $tour->save();
@@ -82,6 +84,7 @@ class CRUDController extends Controller
             'image' => 'required',
             'time' => 'required',
             'price' => 'required',
+            'schedule' => 'required',
             'id_type' => 'required',
         ]);
 
@@ -98,7 +101,8 @@ class CRUDController extends Controller
                 $tour->image = $request->input('image');
                 $tour->time = $request->input('time');
                 $tour->price = $request->input('price');
-                $tour->price = $request->input('id_type');
+                $tour->schedule = $request->input('schedule');
+                $tour->id_type = $request->input('id_type');
                 $tour->update();
 
                 return response()->json([
