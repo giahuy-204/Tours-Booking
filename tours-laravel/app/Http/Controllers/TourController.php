@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tours;
+use App\Models\TypeTours;
 
 class TourController extends Controller
 {

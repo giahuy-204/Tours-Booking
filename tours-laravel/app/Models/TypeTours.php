@@ -12,4 +12,5 @@ class TypeTours extends Model
         'name',
         'description',
     ];
+    protected $table = "type_tours";
 }

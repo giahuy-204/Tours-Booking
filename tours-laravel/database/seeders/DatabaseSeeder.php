@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use DB;
+use Faker\Factory as Faker;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +15,56 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call(TypeToursSeeder::class);
+        $this->call(ToursSeeder::class);
+    }
+}
+
+class TypeToursSeeder extends Seeder {
+    public function run()
+    {
+        DB::table('type_tours')-> insert([
+            [
+                'id' => 1,
+                'name' => 'Hoi An',
+                'description' => 'tour to Hoi An',
+            ],
+            [
+                'id' => 2,
+                'name' => 'Hue',
+                'description' => 'tour to Hue',
+            ],
+            [
+                'id' => 3,
+                'name' => 'Da Nang',
+                'description' => 'tour to Da Nang',
+            ],
+            [
+                'id' => 4,
+                'name' => 'Combo',
+                'description' => 'combo tour',
+            ],
+        ]);
+    }
+}
+
+class ToursSeeder extends Seeder {
+    public function run()
+    {
+        $faker = Faker::create();
+
+        $limit = 20;
+
+        for ($i = 0; $i < $limit; $i++) {
+            DB::table('tours')-> insert([
+                [
+                    'image' => $faker -> imageUrl($width = 640, $height = 480),
+                    'name' => $faker -> unique() -> word,
+                    'description' => $faker -> paragraph($nbSentences = 3, $variableNbSentences = true),
+                    'price'=> $faker -> numberBetween($min = 1000000, $max = 5000000),       
+                    'id_type' => $faker -> numberBetween($min = 1, $max = 4),
+                ],
+            ]);
+        }
     }
 }

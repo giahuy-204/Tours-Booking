@@ -15,4 +15,5 @@ class Tours extends Model
         'price',
         'id_type',
     ];
+    protected $table = "tours";
 }
