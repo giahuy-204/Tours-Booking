@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(TypeToursSeeder::class);
+        // $this->call(TypeToursSeeder::class);
         $this->call(ToursSeeder::class);
     }
 }
@@ -65,8 +65,8 @@ class ToursSeeder extends Seeder {
                 [
                     'image' => $faker -> imageUrl($width = 400, $height = 600),
                     'name' => $faker -> unique() -> word,
-                    'description' => $faker -> paragraph($nbSentences = 3, $variableNbSentences = true),
-                    'price'=> $faker -> numberBetween($min = 1000000, $max = 5000000),       
+                    'description' => $faker -> sentence($nbWords = 6, $variableNbWords = true),
+                    'price'=> $faker -> numberBetween($min = 1000, $max = 5000),       
                     'id_type' => $faker -> numberBetween($min = 1, $max = 4),
                 ],
             ]);

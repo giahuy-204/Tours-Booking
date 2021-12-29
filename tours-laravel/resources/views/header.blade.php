@@ -13,10 +13,9 @@
                 <li class="nav__item">
                     <a href="#place" class="nav__link">Places</a>
                     <div class="dropdown-content">
-                        <a href="/places">Hue</a>
-                        <a href="#">Da Nang</a>
-                        <a href="#">Hoi An</a>
-                        <a href="#">Combo</a>
+                        @foreach ($type_tours as $tours)
+                        <a href="/places/{{$tours->id}}">{{$tours->name}}</a>
+                        @endforeach
                     </div>
                 </li>
 

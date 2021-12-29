@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 //Start tours route
 Route::get('/index','App\Http\Controllers\TourController@index');
-Route::get('/places','App\Http\Controllers\TourController@places');
+Route::get('/places/{id}','App\Http\Controllers\TourController@places');
 Route::get('/details','App\Http\Controllers\TourController@details');
 Route::get('/checkout','App\Http\Controllers\TourController@checkout');
 Route::get('/login','App\Http\Controllers\TourController@login');
