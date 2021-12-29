@@ -73,7 +73,7 @@
                 <!--==================== DISCOVER====================-->
                 @foreach ($type_tours as $type)
                 <div class="discover__card swiper-slide">
-                    <img src="{{$type -> image}}" alt="" class="discover__img">
+                    <a href="/places/{{$type -> id}}"><img src="{{$type -> image}}" alt="" class="discover__img"></a>
                     <div class="discover__data">
                         <h2 class="discover__title">{{$type -> name}}</h2>
                         <span class="discover__description">{{$type -> description}}</span>
