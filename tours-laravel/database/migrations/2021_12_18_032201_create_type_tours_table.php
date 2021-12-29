@@ -15,6 +15,7 @@ class CreateTypeToursTable extends Migration
     {
         Schema::create('type_tours', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('image');
             $table->string('name')->unique();
             $table->string('description');
             $table->timestamps();

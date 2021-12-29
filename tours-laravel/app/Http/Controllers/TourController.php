@@ -9,7 +9,8 @@ use App\Models\TypeTours;
 class TourController extends Controller
 {
     public function index(){
-        return view('page.index');
+        $type_tours = TypeTours::all();
+        return view('page.index', compact('type_tours'));
     }
 
     public function places(){

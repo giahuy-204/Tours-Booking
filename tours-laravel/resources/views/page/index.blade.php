@@ -70,41 +70,16 @@
 
         <div class="discover__container container swiper-container">
             <div class="swiper-wrapper">
-                <!--==================== DISCOVER 1 ====================-->
+                <!--==================== DISCOVER====================-->
+                @foreach ($type_tours as $type)
                 <div class="discover__card swiper-slide">
-                    <img src="/sources/assets/img/discover1.jpg" alt="" class="discover__img">
+                    <img src="{{$type -> image}}" alt="" class="discover__img">
                     <div class="discover__data">
-                        <h2 class="discover__title">Hue</h2>
-                        <span class="discover__description">24 tours available</span>
+                        <h2 class="discover__title">{{$type -> name}}</h2>
+                        <span class="discover__description">{{$type -> description}}</span>
                     </div>
                 </div>
-
-                <!--==================== DISCOVER 2 ====================-->
-                <div class="discover__card swiper-slide">
-                    <img src="/sources/assets/img/discover2.jpg" alt="" class="discover__img">
-                    <div class="discover__data">
-                        <h2 class="discover__title">Da Nang</h2>
-                        <span class="discover__description">15 tours available</span>
-                    </div>
-                </div>
-
-                <!--==================== DISCOVER 3 ====================-->
-                <div class="discover__card swiper-slide">
-                    <img src="/sources/assets/img/discover3.jpg" alt="" class="discover__img">
-                    <div class="discover__data">
-                        <h2 class="discover__title">Travel Around</h2>
-                        <span class="discover__description">18 tours available</span>
-                    </div>
-                </div>
-
-                <!--==================== DISCOVER 4 ====================-->
-                <div class="discover__card swiper-slide">
-                    <img src="/sources/assets/img/discover4.jpg" alt="" class="discover__img">
-                    <div class="discover__data">
-                        <h2 class="discover__title">Hoi An</h2>
-                        <span class="discover__description">32 tours available</span>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
