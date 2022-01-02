@@ -7,9 +7,7 @@
 
         <div class="home__container container grid">
             <div class="home__data">
-                <span class="home__data-subtitle">Discover your place</span>
-                <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> Beaches</b></h1>
-                <a href="#" class="button">Explore</a>
+                <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> City</b> in the <br>Central of Vietnam</h1>
 
             </div>
 

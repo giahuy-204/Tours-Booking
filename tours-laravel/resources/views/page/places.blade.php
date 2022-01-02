@@ -20,13 +20,13 @@
 
                     <div class="place__data">
                         <h3 class="place__title">{{$tours->name}}</h3>
-                        <span class="place__subtitle">{{$tours->description}}</span>
-                        <span class="place__price">Price: {{$tours->price}}$</span>
+                        <span class="place__subtitle">{{$tours->short_description}}</span>
+                        <span class="place__price">Price: {{$tours->adult_price}}/each</span>
                     </div>
                 </div>
 
                 <button class="button button--flex place__button">
-                    <a href="details.html" class="ri-arrow-right-line" style="color: white"></a>
+                    <a href="/details/{{$tours->id}}" class="ri-arrow-right-line" style="color: white"></a>
                 </button>
             </div>
             @endforeach

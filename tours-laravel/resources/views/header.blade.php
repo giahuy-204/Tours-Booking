@@ -1,6 +1,9 @@
 <header class="header" id="header">
     <nav class="nav container">
-        <a href="#" class="nav__logo">Travel</a>
+        <div class="nav__logo">
+            <img src="/sources/assets/img/favicon.png" alt="">
+            <a href="/index" class="nav__logo">Wanderer</a>
+        </div>
 
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
@@ -8,7 +11,7 @@
                     <a href="/index" class="nav__link">Home</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#about" class="nav__link">About</a>
+                    <a href="/about" class="nav__link">About</a>
                 </li>
                 <li class="nav__item">
                     <a href="#place" class="nav__link">Places</a>
