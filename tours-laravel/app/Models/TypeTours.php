@@ -13,4 +13,7 @@ class TypeTours extends Model
         'description',
     ];
     protected $table = "type_tours";
+    public function tours() {
+        return $this->hasMany('App\Product\Tours', 'id_type', 'id');
+    }
 }
