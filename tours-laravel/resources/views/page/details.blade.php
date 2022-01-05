@@ -31,7 +31,7 @@
                         </tr>
                     </table>
                 </div>
-                <a href="/checkout" class="button">Book Now</a>
+                <a href="/checkout/{{$tours->id}}" class="button">Book Now</a>
             </div>
 
             <div class="about__img">
