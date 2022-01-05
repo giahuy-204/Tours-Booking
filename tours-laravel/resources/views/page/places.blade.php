@@ -4,7 +4,11 @@
 
     <!--==================== PLACES ====================-->
     <section class="place section" id="place">
-        <h2 class="section__title">Choose Your Place</h2>
+        @foreach ($type_name as $type_name)
+            <h2 class="section__title">Place: {{$type_name->name}}</h2>
+        @endforeach
+
+        <h2 class="section__title">Choose Your Favorite Tour</h2>
 
         <div class="place__container container grid">
             <!--==================== PLACES CARD ====================-->
@@ -21,7 +25,7 @@
                     <div class="place__data">
                         <h3 class="place__title">{{$tours->name}}</h3>
                         <span class="place__subtitle">{{$tours->short_description}}</span>
-                        <span class="place__price">Price: {{$tours->adult_price}}/each</span>
+                        <span class="place__price">Price: ${{$tours->adult_price}}/ 1</span>
                     </div>
                 </div>
 

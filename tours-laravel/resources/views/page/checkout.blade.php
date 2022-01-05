@@ -158,7 +158,7 @@
                     </div>
                     <hr class="mb-4">
                     <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-                    <a href="index.html" class="btn btn-secondary btn-lg btn-block">Come back home</a>
+                    <a href="/index" class="btn btn-secondary btn-lg btn-block">Come back home</a>
                 </form>
             </div>
         </div>

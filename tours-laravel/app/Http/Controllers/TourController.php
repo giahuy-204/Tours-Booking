@@ -21,8 +21,9 @@ class TourController extends Controller
 
     public function places($type){
         $type_tours = TypeTours::all();
-        $tours = Tours::where('id_type', $type)->limit(4)-> get();
-        return view('page.places', compact('tours'));
+        $type_name = TypeTours::where('id', $type)->get();
+        $tours = Tours::where('id_type', $type)->get();
+        return view('page.places', compact('tours', 'type_name'));
     }
 
     public function details(Request $request){
