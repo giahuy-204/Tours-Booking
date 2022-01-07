@@ -65,8 +65,14 @@ class ToursSeeder extends Seeder {
                 [
                     'image' => $faker -> imageUrl($width = 400, $height = 600),
                     'name' => $faker -> unique() -> word,
-                    'description' => $faker -> sentence($nbWords = 6, $variableNbWords = true),
-                    'price'=> $faker -> numberBetween($min = 1000, $max = 5000),       
+                    'short_description' => $faker -> sentence($nbWords = 6, $variableNbWords = true),
+                    'date_start' => $faker -> date($format = 'Y-m-d', $max = 'now'),
+                    'number_days' => $faker -> numberBetween($min = 7, $max = 14), 
+                    'seats' => $faker -> numberBetween($min = 10, $max = 15), 
+                    'adult_price' => $faker -> numberBetween($min = 1000, $max = 2000), 
+                    'children_price' => $faker -> numberBetween($min = 500, $max = 100), 
+                    'youngchildren_price' => $faker -> numberBetween($min = 200, $max = 500), 
+                    'long_description' => $faker -> paragraph($nbSentences = 3, $variableNbSentences = true),      
                     'id_type' => $faker -> numberBetween($min = 1, $max = 4),
                 ],
             ]);
