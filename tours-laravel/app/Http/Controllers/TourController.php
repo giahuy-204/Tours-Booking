@@ -7,6 +7,7 @@ use App\Models\Tours;
 use App\Models\TypeTours;
 use App\Models\Bills;
 use App\Http\Requests\RuleInput;
+use App\Jobs\SendEmail;
 
 class TourController extends Controller
 {
@@ -52,7 +53,22 @@ class TourController extends Controller
         $bill->youngchildren_price = $request->youngchildren_price;
         $bill->total_price = $request->total_price;
         $bill->save();
-        
+
+        //ojhqEjikwepjkeqwjasdlksac[kc,[l23]]
+        $tour = Tours::where('id', $request->route('id'))->first();
+
+        $message = [
+            'type' => 'Email announce for success tour booked',
+            'thanks' => 'Thanks ' . $request->last_name . " " . $request->first_name. ' for booking our tour.',
+            'adult' => $request->adult_number,
+            'children' => $request->children,
+            'ychildren' => $request->y_children,
+            'price' => $request->total_price,
+            'tour' => $tour,
+        ];
+
+        SendEmail::dispatch($message, $request->email)->delay(now()->addMinute(1));
+
         return redirect()->route('bill_details', [$bill]);
     }
 
