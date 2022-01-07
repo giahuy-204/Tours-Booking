@@ -14,8 +14,8 @@
                     <br>
                     <table width="100%">
                         <tr>
-                            <th>Age</th>
-                            <th>Price</th>
+                            <th style="text-align: left; padding-bottom: 10px">Age</th>
+                            <th style="text-align: left; padding-bottom: 10px">Price</th>
                         </tr>
                         <tr>
                             <td>Adult (> 17)</td>
@@ -50,7 +50,7 @@
     <section class="schedule section">
         <h2 class="schedule__title">Schedule</h2>
 
-        <div class="schedule__container container">
+        <div class="schedule__container container" style="padding-top: 30px">
             <!-- <h4>Day 1</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam doloremque eveniet fuga iste mollitia
                 nihil praesentium quam qui recusandae, repellendus totam vero voluptatibus! Cum facilis necessitatibus

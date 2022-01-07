@@ -32,7 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel-react-midterm/react-laravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tours-laravel" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -58,7 +58,9 @@
       <workItem from="1640785281433" duration="21000" />
       <workItem from="1641370100660" duration="597000" />
       <workItem from="1641480440166" duration="4515000" />
-      <workItem from="1641520693602" duration="1713000" />
+      <workItem from="1641520693602" duration="4832000" />
+      <workItem from="1641552848404" duration="2171000" />
+      <workItem from="1641564711441" duration="21000" />
     </task>
     <servers />
   </component>

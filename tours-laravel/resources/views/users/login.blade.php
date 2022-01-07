@@ -38,7 +38,7 @@
                         </div>
                         <br>
                         <div class="d-grid">
-                            <a href="/register" class="btn fw-bold btn-danger" type="button">
+                            <a href="/register" class="btn fw-bold btn-secondary" type="button">
                                 Create Account
                             </a>
                         </div>
