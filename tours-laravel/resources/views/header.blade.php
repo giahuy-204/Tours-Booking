@@ -25,13 +25,13 @@
                 <li class="nav__item">
                     @if(Session::has('user'))	
                         <a href="#" class="nav__link">Welcome, {{Session('user')->last_name}} {{Session('user')->first_name}} </a>
+                            <div class="dropdown-content">
+                                <!-- <a href="#">Setting</a> -->
+                                <a href="/logout">Logout</a>
+                            </div>
                     @else
                         <a href="/login" class="nav__link">Login</a>
                     @endif
-                    <div class="dropdown-content">
-                        <!-- <a href="#">Setting</a> -->
-                        <a href="/logout">Logout</a>
-                    </div>
                 </li>
             </ul>
 

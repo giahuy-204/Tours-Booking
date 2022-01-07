@@ -88,14 +88,22 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName">First name</label>
-                            <input type="text" class="form-control{{($errors->first('first_name') ? " form-error" : "")}}" id="first_name" name="first_name" >
+                            @if(Session::has('user'))
+                                <input type="text" class="form-control{{($errors->first('first_name') ? " form-error" : "")}}" id="first_name" name="first_name" value = "{{Session('user')->first_name}}" >
+                            @else
+                                <input type="text" class="form-control{{($errors->first('first_name') ? " form-error" : "")}}" id="first_name" name="first_name" >
+                            @endif
                             @error('first_name')
                                 <strong>{{$message}}</strong>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="lastName">Last name</label>
-                            <input type="text" class="form-control{{($errors->first('last_name') ? " form-error" : "")}}" id="last_name" name ="last_name" >
+                            @if(Session::has('user'))
+                                <input type="text" class="form-control{{($errors->first('last_name') ? " form-error" : "")}}" id="last_name" name="last_name" value = "{{Session('user')->last_name}}" >
+                            @else
+                                <input type="text" class="form-control{{($errors->first('last_name') ? " form-error" : "")}}" id="last_name" name="last_name" >
+                            @endif
                             @error('last_name')
                                 <strong>{{$message}}</strong>
                             @enderror

@@ -22,19 +22,6 @@
                     <i class="ri-twitter-fill"></i>
                 </a>
             </div>
-
-            <div class="home__info">
-                <div>
-                    <span class="home__info-title">5 best places to visit</span>
-                    <a href="" class="button button--flex button--link home__info-button">
-                        More <i class="ri-arrow-right-line"></i>
-                    </a>
-                </div>
-
-                <div class="home__info-overlay">
-                    <img src="/sources/assets/img/home2.jpg" alt="" class="home__info-img">
-                </div>
-            </div>
         </div>
     </section>
 
@@ -47,7 +34,7 @@
                     prices with special discounts, you choose the place we will guide you all the way to wait, get your
                     place now.
                 </p>
-                <a href="#" class="button">Reserve a place</a>
+                <a href="/places/1" class="button">Reserve a place</a>
             </div>
 
             <div class="about__img">

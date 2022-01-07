@@ -115,8 +115,7 @@
                     <p class="font-weight-bold mb-0">Thanks for choosing us!</p> <span>Wanderer</span>
                     <br>
                     <br>
-                    <!-- <a href="/index"><button>Send information to my email</button></a> -->
-                    <a href="/index"><button>Back to homepage</button></a>
+                    <a href="/index"><button class = "btn btn-secondary">Back to HomePage</button></a>
                 </div>
             </div>
         </div>
