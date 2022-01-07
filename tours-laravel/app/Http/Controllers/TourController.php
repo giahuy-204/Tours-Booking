@@ -45,13 +45,19 @@ class TourController extends Controller
         $bill->id_tour = $request->route('id');
         $bill->date_booked = date('Y-m-d H:i:s');
         $bill->adult_number = $request->adult_number;
+        $bill->adult_price = $request->adult_price;
         $bill->children_number = $request->children;
+        $bill->children_price = $request->children_price;
         $bill->youngchildren_number = $request->y_children;
+        $bill->youngchildren_price = $request->youngchildren_price;
         $bill->total_price = $request->total_price;
         $bill->save();
+        
+        return redirect()->route('bill_details', [$bill]);
     }
 
-    public function login(){
-        return view('page.login');
+    public function viewBill(Request $request) {
+        $bill = Bills::where('id', $request->id)->first();
+        return view('page.viewbill', compact('bill'));
     }
 }

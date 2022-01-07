@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TourController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +28,21 @@ Route::get('/details/{id}','App\Http\Controllers\TourController@details');
 Route::get('/checkout/{id}','App\Http\Controllers\TourController@checkout');
 Route::post('/checkout/{id}','App\Http\Controllers\TourController@postCheckout');
 
-Route::get('/login','App\Http\Controllers\TourController@login');
+Route::get('/bill_details/{id}','App\Http\Controllers\TourController@viewBill')->name('bill_details');
+
+Route::get('/register','App\Http\Controllers\UserController@register');
+Route::post('/register','App\Http\Controllers\UserController@postRegister');
+
+Route::get('/login','App\Http\Controllers\UserController@login');
+Route::post('/login','App\Http\Controllers\UserController@postLogin');
+
+Route::get('/logout','App\Http\Controllers\UserController@logout');
+
+Route::get('send-mail', function () {
+   
+    \Mail::to('giahuy.dng@gmail.com')->send(new \App\Mail\ToursMail($details));
+   
+    dd("Email is Sent.");
+});
 
 

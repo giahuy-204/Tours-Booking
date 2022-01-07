@@ -18,7 +18,7 @@
                 <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between">
                         <div>
-                            <img src="{{$bill->image}}" alt="" style="width: 150px; height: 150px">
+                            <img src="{{$bill->image1}}" alt="" style="width: 150px; height: 150px">
                         </div>
                         <div class="about__description">
                             <h5>{{$bill->name}}</h5>
@@ -61,6 +61,7 @@
                             @error('adult_number')
                                 <strong>{{$message}}</strong>
                             @enderror
+                            <input type="number" name = "adult_price" id = "adult_price" hidden>
                         </div>
                         <div class="form-group">
                             <label for="children">Number of Children (14 - 17)</label>
@@ -68,6 +69,7 @@
                             @error('children')
                                 <strong>{{$message}}</strong>
                             @enderror
+                            <input type="number" name = "children_price" id = "children_price" hidden>
                         </div>
                         <div class="form-group">
                             <label for="y-children">Number of Children (< 14)</label>
@@ -75,12 +77,13 @@
                             @error('y_children')
                                 <strong>{{$message}}</strong>
                             @enderror
+                            <input type="number" name = "youngchildren_price" id = "youngchildren_price" hidden>
                         </div>
                         <li class="list-group-item d-flex justify-content-between">
                         <span>Total (USD)</span>
                         <!-- <strong id = "total_price" name = "total_price">$0</strong> -->
                         <input type="text" id = "total_pricedisplay" value = "$0" readonly style="border:0; outline:0">
-                        <input type="text" id = "total_price" name = "total_price" hidden>
+                        <input type="number" id = "total_price" name = "total_price" hidden>
                     </li>
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -167,14 +170,22 @@
 
 <script>
     function calculate() {
+        let adult_number = document.getElementById("adult_number").value;
+        let children_number = document.getElementById("children").value;
+        let youngchildren_number = document.getElementById("y_children").value;
+
         document.getElementById("total_pricedisplay").value = "$" +
-        (document.getElementById("adult_number").value * {{$bill->adult_price}}+
-        document.getElementById("children").value * {{$bill->children_price}}+
-        document.getElementById("y_children").value* {{$bill->youngchildren_price}})
+        (adult_number * {{$bill->adult_price}} +
+        children_number * {{$bill->children_price}} +
+        youngchildren_number * {{$bill->youngchildren_price}})
 
         document.getElementById("total_price").value =
-        (document.getElementById("adult_number").value * {{$bill->adult_price}}+
-        document.getElementById("children").value * {{$bill->children_price}}+
-        document.getElementById("y_children").value* {{$bill->youngchildren_price}})
+        (adult_number * {{$bill->adult_price}} +
+        children_number * {{$bill->children_price}} +
+        youngchildren_number * {{$bill->youngchildren_price}})
+
+        document.getElementById("adult_price").value = adult_number * {{$bill->adult_price}};
+        document.getElementById("children_price").value = children_number * {{$bill->children_price}};
+        document.getElementById("youngchildren_price").value = youngchildren_number * {{$bill->youngchildren_price}};
     }
 </script>

@@ -1061,3 +1061,8 @@ input {
     height: 640px;
   }
 }
+
+/*form error*/
+.form-error {
+  border: 2px solid #e74c3c;
+}

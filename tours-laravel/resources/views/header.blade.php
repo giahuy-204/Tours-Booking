@@ -1,7 +1,7 @@
 <header class="header" id="header">
     <nav class="nav container">
         <div class="nav__logo">
-            <img src="/sources/assets/img/favicon.png" alt="">
+            <img src="/sources/assets/img/favicon.png" alt="" >
             <a href="/index" class="nav__logo">Wanderer</a>
         </div>
 
@@ -23,10 +23,14 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="/login" class="nav__link">Login</a>
+                    @if(Session::has('user'))	
+                        <a href="#" class="nav__link">Welcome, {{Session('user')->last_name}} {{Session('user')->first_name}} </a>
+                    @else
+                        <a href="/login" class="nav__link">Login</a>
+                    @endif
                     <div class="dropdown-content">
-                        <a href="#">Setting</a>
-                        <a href="#">Logout</a>
+                        <!-- <a href="#">Setting</a> -->
+                        <a href="/logout">Logout</a>
                     </div>
                 </li>
             </ul>

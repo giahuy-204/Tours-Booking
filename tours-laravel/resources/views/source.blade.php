@@ -15,6 +15,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="/sources/assets/css/styles.css">
     <link rel="stylesheet" href="/sources/assets/css/details-styles.css">
+
     <title>Responsive Website Travel</title>
 </head>
 <body>

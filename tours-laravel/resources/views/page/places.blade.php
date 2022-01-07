@@ -14,7 +14,7 @@
             <!--==================== PLACES CARD ====================-->
             @foreach ($tours as $tours)
             <div class="place__card">
-                <img src="{{$tours->image}}" alt="" class="place__img">
+                <img src="{{$tours->image1}}" alt="" class="place__img">
 
                 <div class="place__content">
                             <span class="place__rating">

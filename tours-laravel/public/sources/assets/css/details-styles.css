@@ -15,3 +15,8 @@
 .schedule__container > * {
     padding-bottom: 15px;
 }
+
+/*form error*/
+.form-error {
+    border: 2px solid #e74c3c;
+}

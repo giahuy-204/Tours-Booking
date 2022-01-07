@@ -36,11 +36,11 @@
 
             <div class="about__img">
                 <div class="about__img-overlay">
-                    <img src="{{$tours->image}}" alt="" class="about__img-one">
+                    <img src="{{$tours->image1}}" alt="" class="about__img-one">
                 </div>
 
                 <div class="about__img-overlay">
-                    <img src="{{$tours->image}}" alt="" class="about__img-two">
+                    <img src="{{$tours->image2}}" alt="" class="about__img-two">
                 </div>
             </div>
         </div>

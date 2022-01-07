@@ -22,8 +22,11 @@ class CreateBillTable extends Migration
             $table->smallInteger('id_tour');
             $table->date('date_booked');
             $table->smallInteger('adult_number');
+            $table->mediumInteger('adult_price');
             $table->smallInteger('children_number');
+            $table->mediumInteger('children_price');
             $table->smallInteger('youngchildren_number');
+            $table->mediumInteger('youngchildren_price');
             $table->mediumInteger('total_price');
             $table->timestamps();
         });
