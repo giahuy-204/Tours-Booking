@@ -28,7 +28,7 @@ Route::get('/details/{id}','App\Http\Controllers\TourController@details')->name(
 Route::get('/checkout/{id}','App\Http\Controllers\TourController@checkout');
 Route::post('/checkout/{id}','App\Http\Controllers\TourController@postCheckout');
 
-Route::get('/bill_details/{id}','App\Http\Controllers\TourController@viewBill')->name('bill_details');
+Route::get('/bill_details','App\Http\Controllers\TourController@viewBill')->name('bill_details');
 
 Route::get('/register','App\Http\Controllers\UserController@register');
 Route::post('/register','App\Http\Controllers\UserController@postRegister');

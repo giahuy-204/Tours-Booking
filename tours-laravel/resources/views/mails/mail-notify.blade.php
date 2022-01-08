@@ -10,7 +10,7 @@
        <p>Number of Adult: {{$data['adult']}}</p>
        <p>Number of Children: {{$data['children']}}</p>
        <p>Number of Young children: {{$data['ychildren']}}</p>
-       <p>Total price: {{$data['price']}}</p>
+       <p>Total price: {{$data['price']}}$</p>
    </div>
    <h2>Have fun and safe with the tour!</h6>
 </div>

@@ -38,23 +38,23 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="invoice p-5">
-                    <h5>Your order Confirmed!</h5> <span class="font-weight-bold d-block mt-4">Hello, {{$bill->first_name}} {{$bill->last_name}}</span>
+                    <h5>Your order Confirmed!</h5> <span class="font-weight-bold d-block mt-4">Hello, {{Session('bill')->first_name}} {{Session('bill')->last_name}}</span>
                     <span>Your order has been confirmed. Have a good trip!</span>
                     <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
                         <table class="table table-borderless">
                             <tbody>
                             <tr>
                                 <td>
-                                    <div class="py-2"><span class="d-block text-muted">Order Date</span> <span>{{$bill->date_booked}}</span>
+                                    <div class="py-2"><span class="d-block text-muted">Order Date</span> <span>{{Session('bill')->date_booked}} (UTC Time)</span>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="py-2"><span class="d-block text-muted">Order No</span>
-                                        <span>{{$bill->id}}</span></div>
+                                        <span>{{Session('bill')->id}}</span></div>
                                 </td>
                                 <td>
                                     <div class="py-2"><span class="d-block text-muted">Payment</span> <span><img
-                                            src="https://img.icons8.com/color/48/000000/mastercard.png"
+                                            src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-vi-vnpay-mien-phi.jpg"
                                             width="20"/></span></div>
                                 </td>
                             </tr>
@@ -66,31 +66,31 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <h4>Tour name</h4>
+                                    <h4>Bill details</h4>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="60%"><span class="font-weight-bold">Adult (>17)</span>
-                                    <div class="product-qty"><span class="d-block">Number: {{$bill->adult_number}}</span></div>
+                                    <div class="product-qty"><span class="d-block">Number: {{Session('bill')->adult_number}}</span></div>
                                 </td>
                                 <td width="20%">
-                                    <div class="text-right"><span class="font-weight-bold">${{$bill->adult_price}}</span></div>
+                                    <div class="text-right"><span class="font-weight-bold">${{Session('bill')->adult_price}}</span></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="60%"><span class="font-weight-bold">Children (14-17)</span>
-                                    <div class="product-qty"><span class="d-block">Number: {{$bill->children_number}}</span></div>
+                                    <div class="product-qty"><span class="d-block">Number: {{Session('bill')->children_number}}</span></div>
                                 </td>
                                 <td width="20%">
-                                    <div class="text-right"><span class="font-weight-bold">${{$bill->children_price}}</span></div>
+                                    <div class="text-right"><span class="font-weight-bold">${{Session('bill')->children_price}}</span></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="60%"><span class="font-weight-bold">Children (<14)</span>
-                                    <div class="product-qty"><span class="d-block">Number: {{$bill->youngchildren_number}}</span></div>
+                                    <div class="product-qty"><span class="d-block">Number: {{Session('bill')->youngchildren_number}}</span></div>
                                 </td>
                                 <td width="20%">
-                                    <div class="text-right"><span class="font-weight-bold">${{$bill->youngchildren_price}}</span></div>
+                                    <div class="text-right"><span class="font-weight-bold">${{Session('bill')->youngchildren_price}}</span></div>
                                 </td>
                             </tr>
                             </tbody>
@@ -105,7 +105,7 @@
                                         <div class="text-left"><span class="font-weight-bold">Total</span></div>
                                     </td>
                                     <td>
-                                        <div class="text-right"><span class="font-weight-bold">${{$bill->total_price}}</span></div>
+                                        <div class="text-right"><span class="font-weight-bold">${{Session('bill')->total_price}}</span></div>
                                     </td>
                                 </tr>
                                 </tbody>

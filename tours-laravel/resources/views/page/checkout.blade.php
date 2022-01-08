@@ -1,5 +1,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="shortcut icon" href="#" />
 <style>
     .form-error {
         border: 2px solid #e74c3c;
@@ -111,7 +112,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                        <input type="email" class="form-control{{($errors->first('email') ? " form-error" : "")}}" id="email" placeholder="you@example.com" name = "email">
+                        @if(Session::has('user'))
+                            <input type="email" class="form-control{{($errors->first('email') ? " form-error" : "")}}" id="email" placeholder="you@example.com" name = "email" value = "{{Session('user')->email}}">
+                        @else
+                            <input type="email" class="form-control{{($errors->first('email') ? " form-error" : "")}}" id="email" placeholder="you@example.com" name = "email">
+                        @endif
                             @error('email')
                                 <strong>{{$message}}</strong>
                             @enderror
@@ -126,49 +131,24 @@
                     <hr class="mb-4">
                     <h4 class="mb-3">Payment</h4>
                     <div class="d-block my-3">
-                        <div class="custom-control custom-radio">
+                        <!-- <div class="custom-control custom-radio">
                             <input id="credit" name="paymentMethod" type="radio" class="custom-control-input"
                                     checked="" required="">
                             <label class="custom-control-label" for="credit">Credit card</label>
-                        </div>
-                        <div class="custom-control custom-radio">
+                        </div> -->
+                        <!-- <div class="custom-control custom-radio">
                             <input id="debit" name="paymentMethod" type="radio" class="custom-control-input"
                                     required="">
                             <label class="custom-control-label" for="debit">Debit card</label>
-                        </div>
+                        </div> -->
                         <div class="custom-control custom-radio">
                             <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
-                                    required="">
-                            <label class="custom-control-label" for="paypal">PayPal</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="cc-name">Name on card</label>
-                            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-                            <small class="text-muted">Full name as displayed on card</small>
-                            <div class="invalid-feedback"> Name on card is required</div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cc-number">Credit card number</label>
-                            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-                            <div class="invalid-feedback"> Credit card number is required</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 mb-3">
-                            <label for="cc-expiration">Expiration</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                            <div class="invalid-feedback"> Expiration date required</div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="cc-cvv">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                            <div class="invalid-feedback"> Security code required</div>
+                                    required="" checked>
+                            <label class="custom-control-label" for="paypal">VNPay</label>
                         </div>
                     </div>
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" >Continue to checkout</button>
                     <a href="/index" class="btn btn-secondary btn-lg btn-block">Come back home</a>
                 </form>
             </div>
