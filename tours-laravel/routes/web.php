@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Start tours route
+//Start tours booking route
 Route::get('/index','App\Http\Controllers\TourController@index');
 
 Route::get('/about','App\Http\Controllers\TourController@about');
@@ -37,6 +37,14 @@ Route::get('/login','App\Http\Controllers\UserController@login');
 Route::post('/login','App\Http\Controllers\UserController@postLogin');
 
 Route::get('/logout','App\Http\Controllers\UserController@logout');
+//End 
+
+//Start admin management tours route
+Route::get('/admin-index','App\Http\Controllers\AdminController@index');
+Route::get('/admin-bills','App\Http\Controllers\AdminController@bills');
+Route::get('/admin-tours','App\Http\Controllers\AdminController@tours');
+Route::get('/admin-types','App\Http\Controllers\AdminController@types');
+
 
 
 
