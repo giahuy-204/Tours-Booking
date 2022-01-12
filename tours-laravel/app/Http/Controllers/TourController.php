@@ -65,10 +65,10 @@ class TourController extends Controller
         Session::put('bill', $bill);
 
         //Payment
-        $vnp_TmnCode = "90HVVQAH"; //Mã website tại VNPAY
-        $vnp_HashSecret = "RDWSGLEHAGPGPBKBDBDVSRZSNJKXGZIC"; //Chuỗi bí mật
-        //57U1FZ9V
-        //TQIBCZEXUERWJKGJGLWFQHCLSWWOCXVZ
+        $vnp_TmnCode = "57U1FZ9V"; //Mã website tại VNPAY
+        $vnp_HashSecret = "TQIBCZEXUERWJKGJGLWFQHCLSWWOCXVZ"; //Chuỗi bí mật
+        //90HVVQAH
+        //RDWSGLEHAGPGPBKBDBDVSRZSNJKXGZIC
         $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
         $vnp_Returnurl = "http://localhost:8000/bill_details";
         $vnp_TxnRef = date("YmdHis"); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY

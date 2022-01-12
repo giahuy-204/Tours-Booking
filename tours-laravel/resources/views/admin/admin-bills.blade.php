@@ -15,13 +15,13 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Tour ID Booked</th>
-                        <th>Tour Date Booked</th>
+                        <th>Bill ID</th>
+                        <th>Customer First Name</th>
+                        <th>Customer Last Name</th>
+                        <th>Customer Email</th>
+                        <th>Customer Phone</th>
+                        <th>Customer Tour Booked (ID)</th>
+                        <th>Customer Date Booked</th>
                         <th>Adult (>17)</th>
                         <th>Children (14-17)</th>
                         <th>Children (<14)</th>
@@ -29,27 +29,28 @@
                         <th width="30px">Action</th>
                     </tr>
                     </thead>
-
                     <tbody>
-                    <tr>
-                        <td>Hoi An</td>
-                        <td>Vinpearl</td>
-                        <td><img src="" alt="image1"></td>
-                        <td><img src="" alt="image2"></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td>dd/mm/yyyy</td>
-                        <td>10</td>
-                        <td>200</td>
-                        <td>69
-                        </td>
-                        <td>$106,450</td>
-                        <td>$106,450</td>
-                        <td>
-                            <button class="btn btn-danger mt-1" style="width:100%">Delete</button>
-                        </td>
-                    </tr>
+                        @foreach ($bills as $bill)
+                            <tr>
+                                <td>{{$bill->id}}</td>
+                                <td>{{$bill->first_name}}</td>
+                                <td>{{$bill->last_name}}</td>
+                                <td>{{$bill->email}}</td>
+                                <td>{{$bill->phone}}</td>
+                                <td>{{$bill->id_tour}}</td>
+                                <td>{{$bill->date_booked}}</td>
+                                <td>{{$bill->adult_number}}</td>
+                                <td>{{$bill->children_number}}</td>
+                                <td>{{$bill->youngchildren_number}}</td>
+                                <td>{{$bill->total_price}}$</td>
+                                <td>
+                                    <button class="btn btn-danger mt-1" style="width:100%">Delete</button>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                <div class="row">{{$bills->links("pagination::bootstrap-4")}}</div>
             </div>
         </div>
     </div>

@@ -24,16 +24,18 @@
                     </thead>
 
                     <tbody>
-                    <tr>
-                        <td>Hoi An</td>
-                        <td>Vinpearl</td>
-                        <td><img src="" alt="image1"></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>                        
-                        <td>
-                            <button class="btn btn-warning" style="width:100%">Edit</button>
-                            <button class="btn btn-danger mt-1" style="width:100%">Delete</button>
-                        </td>
-                    </tr>
+                    @foreach ($types as $type)
+                        <tr>                     
+                            <td>{{$type->id}}</td>
+                            <td>{{$type->name}}</td>
+                            <td><img src="{{$type->image}}" alt="image1" width = "200px" height ="200px"></td>
+                            <td>{{$type->description}}</td>                        
+                            <td>
+                                <button class="btn btn-warning" style="width:100%">Edit</button>
+                                <button class="btn btn-danger mt-1" style="width:100%">Delete</button>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

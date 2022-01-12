@@ -12,9 +12,11 @@
             rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="admin-sources/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/admin-sources/css/sb-admin-2.min.css" rel="stylesheet">
 
-    <link href="admin-sources/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="/admin-sources/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Dashboard Management Travel</title>
 </head>

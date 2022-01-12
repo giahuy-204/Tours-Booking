@@ -17,7 +17,7 @@ class Tours extends Model
     ];
     protected $table = "tours";
     public function type_tours() {
-         return $this->belongsTo('App\Product\TypeTours', 'id_type', 'id');
+         return $this->belongsTo('App\Product\TypeTours', 'id', 'id_type');
     }
     public function bill_details() {
         return $this->hasMany('App\Product\Bills', 'id_tour', 'id');

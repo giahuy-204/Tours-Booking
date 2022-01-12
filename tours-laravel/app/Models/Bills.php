@@ -9,7 +9,7 @@ class Bills extends Model
 {
     use HasFactory;
     protected $table = "bills";
-    public function tours() {
-        return $this->belongsTo('App\Product\Tours', 'id_tour', 'id');
+    public function bill() {
+        return $this->belongsTo('App\Product\Tours', 'id', 'id_tour');
    }
 }
