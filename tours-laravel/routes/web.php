@@ -45,10 +45,19 @@ Route::get('/admin-bills','App\Http\Controllers\AdminController@bills');
 Route::get('/admin-tours','App\Http\Controllers\AdminController@tours');
 Route::get('/admin-types','App\Http\Controllers\AdminController@types');
 
+//manage for tours table
 Route::get('/admin-addtour','App\Http\Controllers\AdminController@addTour');
 Route::post('/admin-addtour','App\Http\Controllers\AdminController@postAddTour');
 Route::get('/admin-edittour/{id}','App\Http\Controllers\AdminController@editTour');
+Route::post('/admin-edittour/{id}','App\Http\Controllers\AdminController@postEditTour');
 Route::get('/admin-deletetour/{id}','App\Http\Controllers\AdminController@deleteTour');
 
+//manage for bills table
+Route::get('/admin-deletebill/{id}','App\Http\Controllers\AdminController@deleteBill');
 
-
+//manage for types table
+Route::get('/admin-addtype','App\Http\Controllers\AdminController@addType');
+Route::post('/admin-addtype','App\Http\Controllers\AdminController@postAddType');
+Route::get('/admin-edittype/{id}','App\Http\Controllers\AdminController@editType');
+Route::post('/admin-edittype/{id}','App\Http\Controllers\AdminController@postEditType');
+Route::get('/admin-deletetype/{id}','App\Http\Controllers\AdminController@deleteType');

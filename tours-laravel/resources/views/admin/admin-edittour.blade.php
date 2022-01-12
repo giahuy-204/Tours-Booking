@@ -84,4 +84,12 @@
     </div>
 
 </div>
+
+<script>
+    function selectOption() {
+        document.getElementById("tourType").value = {{$tour->id_type}};
+    }
+
+    selectOption();
+</script>
 @endsection

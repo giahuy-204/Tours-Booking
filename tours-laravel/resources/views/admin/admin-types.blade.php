@@ -9,7 +9,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="mt-2 font-weight-bold text-primary" style="float: left">Tour Types Table</h6>
-            <a href="#" type="button" class="btn btn-primary" style="float: right">Add</a>
+            <a href="/admin-addtype" type="button" class="btn btn-primary" style="float: right">Add</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -31,8 +31,8 @@
                             <td><img src="{{$type->image}}" alt="image1" width = "200px" height ="200px"></td>
                             <td>{{$type->description}}</td>                        
                             <td>
-                                <button class="btn btn-warning" style="width:100%">Edit</button>
-                                <button class="btn btn-danger mt-1" style="width:100%">Delete</button>
+                                <a href="/admin-edittype/{{$type->id}}"><button class="btn btn-warning" style="width:100%">Edit</button></a>
+                                <a href="/admin-deletetype/{{$type->id}}"><button class="btn btn-danger mt-1" style="width:100%">Delete</button></a>
                             </td>
                         </tr>
                     @endforeach

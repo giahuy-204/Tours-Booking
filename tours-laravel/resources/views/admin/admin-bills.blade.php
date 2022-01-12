@@ -44,7 +44,7 @@
                                 <td>{{$bill->youngchildren_number}}</td>
                                 <td>{{$bill->total_price}}$</td>
                                 <td>
-                                    <button class="btn btn-danger mt-1" style="width:100%">Delete</button>
+                                    <a href="/admin-deletebill/{{$bill->id}}"><button class="btn btn-danger mt-1" style="width:100%">Delete</button></a>
                                 </td>
                             </tr>
                         @endforeach
