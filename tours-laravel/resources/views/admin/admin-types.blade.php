@@ -20,6 +20,7 @@
                         <th>Tour Type Name</th>
                         <th>Tour Type Image</th>
                         <th>Tour Type Description</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
 

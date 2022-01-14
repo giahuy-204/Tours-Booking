@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Bills;
 use App\Models\Tours;
 use App\Models\TypeTours;
+use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image as Image;
 use File;
@@ -18,7 +19,11 @@ class AdminController extends Controller
         $income_month = Bills::where('created_at', '>', now()->subDays(30)->endOfDay())->sum('total_price');
         $tours_booked = Bills::all();
         $tours_available = Tours::all();
-        return view('admin.admin-index', compact('income', 'income_month', 'tours_booked', 'tours_available'));
+        $users = User::select(\DB::raw("COUNT(*) as count"))
+                    ->whereYear('created_at', date('Y'))
+                    ->groupBy(\DB::raw("Month(created_at)"))
+                    ->pluck('count');
+        return view('admin.admin-index', compact('income', 'income_month', 'tours_booked', 'tours_available', 'users'));
     }
 
     //functions related to tours table
