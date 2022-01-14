@@ -142,11 +142,11 @@
                             <label class="custom-control-label" for="debit">Debit card</label>
                         </div> -->
                         <div class="custom-control custom-radio">
-                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
+                            <input id="local" name="paymentMethod" type="radio" class="custom-control-input"
                                     checked value = "local">
                             <label class="custom-control-label" for="paypal">Payment at our company</label>
                             <br>
-                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
+                            <input id="vnPay" name="paymentMethod" type="radio" class="custom-control-input"
                                     value = "vnPay">
                             <label class="custom-control-label" for="paypal">VNPay</label>
                         </div>
