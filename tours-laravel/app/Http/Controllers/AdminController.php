@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image as Image;
 use File;
+use DB;
 
 class AdminController extends Controller
 {
