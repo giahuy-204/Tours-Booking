@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label for="longDes">Type description</label>
-                            <input class="form-control" type="text" id="typeDes" name="typeDes" required>
+                            <textarea class="form-control" type="text" id="typeDes" name="typeDes" required></textarea>
                         </div>
                 
 

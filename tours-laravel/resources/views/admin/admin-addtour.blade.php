@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group">
                             <label for="shortDes">Short description</label>
-                            <input class="form-control" type="text" id="shortDes" name="shortDes" required>
+                            <textarea class="form-control" type="text" id="shortDes" name="shortDes" required></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group">
                             <label for="longDes">Long Description</label>
-                            <input class="form-control" type="text" id="longDes" name="longDes" required>
+                            <textarea class="form-control" type="text" id="longDes" name="longDes" required></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">

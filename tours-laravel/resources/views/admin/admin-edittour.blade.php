@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group">
                             <label for="shortDes">Short description</label>
-                            <input class="form-control" type="text" id="shortDes" name="shortDes" value = "{{$tour->short_description}}">
+                            <textarea class="form-control" type="text" id="shortDes" name="shortDes" value = "{{$tour->short_description}}"></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group">
                             <label for="longDes">Long Description</label>
-                            <input class="form-control" type="text" id="longDes" name="longDes" value = "{{$tour->long_description}}">
+                            <textarea class="form-control" type="text" id="longDes" name="longDes" value = "{{$tour->long_description}}"></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
