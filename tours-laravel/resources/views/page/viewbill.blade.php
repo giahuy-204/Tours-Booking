@@ -39,7 +39,7 @@
             <div class="card">
                 <div class="invoice p-5">
                     <h5>Your order Confirmed!</h5> <span class="font-weight-bold d-block mt-4">Hello, {{Session('bill')->first_name}} {{Session('bill')->last_name}}</span>
-                    <span>Your order has been confirmed. Have a good trip!</span>
+                    <span>Your order has been confirmed. We will contact you soon!</span>
                     <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
                         <table class="table table-borderless">
                             <tbody>

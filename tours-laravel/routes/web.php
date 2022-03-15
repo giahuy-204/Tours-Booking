@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 //Start tours booking route
-Route::get('/index','App\Http\Controllers\TourController@index');
+Route::get('/index','App\Http\Controllers\TourController@index')->name('index');
 
 Route::get('/about','App\Http\Controllers\TourController@about');
 

@@ -134,7 +134,7 @@ class TourController extends Controller
             ];
 
             SendEmail::dispatch($message, $request->email)->delay(now()->addMinute(1));
-            
+
         } else {
             $bill = new Bills;
             $bill->first_name = $request->first_name;
@@ -151,12 +151,12 @@ class TourController extends Controller
             $bill->youngchildren_price = $request->youngchildren_price;
             $bill->total_price = $request->total_price;
             $bill->save();
-    
+
             Session::put('bill', $bill);
-    
+
             //ojhqEjikwepjkeqwjasdlksac[kc,[l23]]
             $tour = Tours::where('id', $request->route('id'))->first();
-    
+
             $message = [
                 'type' => 'Email announce for success tour booked',
                 'thanks' => 'Thanks ' . $request->last_name . " " . $request->first_name . ' for booking our tour.',
@@ -166,14 +166,20 @@ class TourController extends Controller
                 'price' => $request->total_price,
                 'tour' => $tour,
             ];
-    
+
             SendEmail::dispatch($message, $request->email)->delay(now()->addMinute(1));
             return redirect()->route('bill_details');
         }
     }
 
-    public function viewBill()
+    public function viewBill(Request $request)
     {
-        return view('page.viewbill');
+        //if user booked after access, redirect to bill_details, otherwise sit down.
+        if ($request->session()->has('bill')) {
+            return view('page.viewbill');
+        } else {
+            //echo alert
+            return redirect()->route('index');
+        }
     }
 }
